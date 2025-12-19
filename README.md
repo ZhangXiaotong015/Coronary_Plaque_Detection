@@ -16,9 +16,13 @@ docker build -t plaque_det:polar .
 ## In the run.sh, replace the path in '-v /mnt/e/WSL/TestData/PlaqueDet/oriCT/deeplearning:/data_test_CT \' with your own data path.
 bash run.sh
 ```
+If you want to build inference image for the Cartesian view, you can find the model weights and the 'sample_line' files at [this link](https://drive.google.com/drive/folders/1yntV1aQUuT-v-DG_rPg5gq1kKEzP5bVv?usp=drive_link) and download them to ```Cartesian/Dockerfile/model```.
+
+If you want to build inference image for the polar view, you can find the model weights and the 'sample_line' files at [this link](https://drive.google.com/drive/folders/1h_tOgkgco-ynV1f7dgLWVl0h892T40mp?usp=drive_link) and download them to ```Polar/Dockerfile/model```.
 
 ## Apptainer/Singularity container system
 If you have a Docker image built as mentioned above, you can save the Docker image to a ```.tar``` file and convert it to a ```SIF``` file, which is compatible with Apptainer.
+
 For predictions in Cartesian view:
 ```
 docker save -o plaque_det_denseunet.tar plaque_det:cartesian
