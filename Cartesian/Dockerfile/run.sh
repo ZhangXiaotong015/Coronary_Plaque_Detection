@@ -8,12 +8,12 @@ mkdir -p "$Data_test_25D"
 docker run --rm --gpus "device=0" \
     -v "$OUTDIR":/output \
     -v "$OUTDIR_Chemo":/output_chemo \
-    -v /mnt/e/xiaotong/WSL/TestData/PlaqueDet/oriCT/deeplearning:/data_test_CT \
+    -v /mnt/e/WSL/TestData/PlaqueDet/oriCT/deeplearning:/data_test_CT \
     -v "$Data_test_25D":/data_test_CT_25D \
     -e MODEL_PATH=/app/model/model_041.hdf5 \
     -e SPARSE_MATRIX_PATH=/app/model/lumenCenter_sampleLine_sparseMetrix.npy \
     -e SAMPLE_LINE_PATH=/app/model/lumenCenter_sampleLine.npy \
-    plaque_det_denseunet:20251119 \
+    plaque_det:cartesian \
     --test_save_path /output \
     --chemogram_save_path /output_chemo \
     --path_test_CT /data_test_CT \
@@ -31,12 +31,12 @@ docker run --rm --gpus "device=0" \
 # docker run --rm -it --gpus "device=0" \
 #     -v "$OUTDIR":/output \
 #     -v "$OUTDIR_Chemo":/output_chemo \
-#     -v /mnt/e/xiaotong/WSL/TestData/PlaqueDet/oriCT/deeplearning:/data_test_CT \
+#     -v /mnt/e/WSL/TestData/PlaqueDet/oriCT/deeplearning:/data_test_CT \
 #     -v "$Data_test_25D":/data_test_CT_25D \
 #     -e MODEL_PATH=/app/model/model_041.hdf5 \
 #     -e SPARSE_MATRIX_PATH=/app/model/lumenCenter_sampleLine_sparseMetrix.npy \
 #     -e SAMPLE_LINE_PATH=/app/model/lumenCenter_sampleLine.npy \
-#     plaque_det:20251119 \
+#     plaque_det:cartesian \
 #     bash
 
 ##### All mounted paths must be exist!!!
