@@ -14,13 +14,13 @@ bash run.sh
 ```
 ```Contents of the output folder```
 
-```/xxxxxx/xxx.nii.gz:``` Slice-wise probability distribution map of the straightened MPR.
+```output/xxxxxx/xxx.nii.gz:``` Slice-wise probability distribution map of the straightened MPR.
 
 ```Contents of the output_chemogram folder```
 
-```/xxxxxx/xxx.png:``` PNG-formatted spread-out view of lipid-rich or calcified plaques.
+```output_chemogram/xxxxxx/xxx.png:``` PNG-formatted spread-out view of lipid-rich or calcified plaques.
 
-```xxx.nii.gz:``` NITFI-formatted spread-out view of lipid-rich or calcified plaques.
+```output_chemogram/xxx.nii.gz:``` NITFI-formatted spread-out view of lipid-rich or calcified plaques.
 
 **Polar view**
 ```
@@ -28,6 +28,13 @@ cd Polar/Dockerfile
 docker build -t plaque_det:polar .
 ## In the run.sh, replace the path in '-v /mnt/e/WSL/TestData/PlaqueDet/oriCT/deeplearning:/data_test_CT \' with your own data path.
 bash run.sh
+
+```Contents of the output folder```
+
+```output/chemogram_test/test_maskrcnn/xxxxxx/xxx.png:``` PNG-formatted spread-out view of lipid-rich or calcified plaques.
+
+```output/chemogram_test/test_maskrcnn/xxx.nii.gz:``` NITFI-formatted spread-out view of lipid-rich or calcified plaques.
+
 ```
 If you want to build inference image for the Cartesian view, you can find the model weights and the 'sample_line' files at [this link](https://drive.google.com/drive/folders/1yntV1aQUuT-v-DG_rPg5gq1kKEzP5bVv?usp=drive_link) and download them to ```Cartesian/Dockerfile/model```.
 
