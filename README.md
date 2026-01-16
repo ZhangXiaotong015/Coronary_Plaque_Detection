@@ -18,6 +18,10 @@ bash run.sh
 
 ```Contents of the output_chemogram folder:```
 
+```/xxxxxx/xxx.png:``` PNG-formatted spread-out view of lipid-rich or calcified plaques.
+
+```xxx.nii.gz:``` NITFI-formatted spread-out view of lipid-rich or calcified plaques.
+
 **Polar view**
 ```
 cd Polar/Dockerfile 
