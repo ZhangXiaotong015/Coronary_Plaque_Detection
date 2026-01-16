@@ -37,7 +37,7 @@ bash run.sh
 
 ```output/chemogram_test/test_maskrcnn/xxx.nii.gz:``` NITFI-formatted spread-out view of lipid-rich or calcified plaques.
 
-```output/predicted_box_test/test_maskrcnn/xxxxxx/xxx.png:``` PNG-formatted slice-wise bounding box localization of lipid-rich or calcified plaques. ()
+```output/predicted_box_test/test_maskrcnn/xxxxxx/xxx.png:``` PNG-formatted slice-wise bounding box localization of lipid-rich or calcified plaques. (Bounding boxes are generated only when the ```--pred_box_viz``` parameter is enabled in run.sh.)
 
 If you want to build inference image for the Cartesian view, you can find the model weights and the 'sample_line' files at [this link](https://drive.google.com/drive/folders/1yntV1aQUuT-v-DG_rPg5gq1kKEzP5bVv?usp=drive_link) and download them to ```Cartesian/Dockerfile/model```.
 
