@@ -12,6 +12,10 @@ docker build -t plaque_det:cartesian .
 ## In the run.sh, replace the path in '-v /mnt/e/WSL/TestData/PlaqueDet/oriCT/deeplearning:/data_test_CT \' with your own data path.
 bash run.sh
 ```
+**Contents of the output folder:**
+
+**Contents of the output_chemogram folder:**
+
 **Polar view**
 ```
 cd Polar/Dockerfile 
