@@ -4,6 +4,7 @@ The official implementation of 'Cross-sectional angle prediction of lipid-rich a
 ## Dockerfile
 You can simply build the inference image in a WSL2 environment using the Dockerfile in [Cartesian/Dockerfile](Cartesian/Dockerfile/) (coronary plaque detection in a Cartesian view using a 2.5D Dense U-Net), 
 or using the Dockerfile in [Polar/Dockerfile](Polar/Dockerfile/) (coronary plaque detection in a Polar view using a 2.5D Mask R-CNN).
+
 **Cartesian view**
 ```
 cd Cartesian/Dockerfile 
