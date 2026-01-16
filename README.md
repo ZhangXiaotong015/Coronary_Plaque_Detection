@@ -14,6 +14,8 @@ bash run.sh
 ```
 ```Contents of the output folder:```
 
+```/xxxxxx/xxx.nii.gz:``` Slice-wise probability distribution map of the straightened MPR.
+
 ```Contents of the output_chemogram folder:```
 
 **Polar view**
